@@ -1,0 +1,127 @@
+
+/* Apply consistent sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Style the entire page */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: #151515;
+    color: white;
+
+    /* Center the application */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the main container */
+.container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Style the main title */
+h1 {
+    font-size: 48px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style the instructions */
+p {
+    color: #aaaaaa;
+    margin-bottom: 45px;
+    font-size: 16px;
+}
+
+/* Arrange the drum buttons in a grid */
+.drum-kit {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Style every drum button */
+.drum {
+    min-height: 145px;
+    border: 3px solid #ff4081;
+    border-radius: 15px;
+    background: #252525;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    /* Center the button content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Style the drum names */
+.drum strong {
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+/* Style the keyboard shortcut */
+.drum span {
+    color: #ff4081;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Change the button appearance when hovered */
+.drum:hover {
+    background: #ff4081;
+    transform: scale(1.04);
+}
+
+/* Change the shortcut color when hovered */
+.drum:hover span {
+    color: white;
+}
+
+/* Show a pressed animation */
+.drum.active {
+    background: #e91e63;
+    transform: scale(0.94);
+}
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 600px) {
+
+    /* Use two columns on smaller screens */
+    .drum-kit {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    /* Reduce button height */
+    .drum {
+        min-height: 120px;
+    }
+
+    /* Reduce title size */
+    h1 {
+        font-size: 35px;
+    }
+
+}
+
+/* Use one column on very narrow screens */
+@media (max-width: 350px) {
+
+    /* Stack all drum buttons */
+    .drum-kit {
+        grid-template-columns: 1fr;
+    }
+
+}

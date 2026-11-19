@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Make the application responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Set the browser tab title -->
+    <title>Drum Kit</title>
+
+    <!-- Connect the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main application container -->
+    <main class="container">
+
+        <!-- Application title -->
+        <h1>DRUM KIT</h1>
+
+        <!-- Instructions -->
+        <p>Click a drum or press its corresponding keyboard key!</p>
+
+        <!-- Drum buttons -->
+        <section class="drum-kit">
+
+            <button class="drum" data-sound="boom" data-key="F">
+                <strong>BOOM</strong>
+                <span>F</span>
+            </button>
+
+            <button class="drum" data-sound="clap" data-key="S">
+                <strong>CLAP</strong>
+                <span>S</span>
+            </button>
+
+            <button class="drum" data-sound="hihat" data-key="D">
+                <strong>HIHAT</strong>
+                <span>D</span>
+            </button>
+
+            <button class="drum" data-sound="kick" data-key="A">
+                <strong>KICK</strong>
+                <span>A</span>
+            </button>
+
+            <button class="drum" data-sound="openhat" data-key="G">
+                <strong>OPENHAT</strong>
+                <span>G</span>
+            </button>
+
+            <button class="drum" data-sound="ride" data-key="H">
+                <strong>RIDE</strong>
+                <span>H</span>
+            </button>
+
+            <button class="drum" data-sound="snare" data-key="J">
+                <strong>SNARE</strong>
+                <span>J</span>
+            </button>
+
+            <button class="drum" data-sound="tink" data-key="K">
+                <strong>TINK</strong>
+                <span>K</span>
+            </button>
+
+            <button class="drum" data-sound="tom" data-key="L">
+                <strong>TOM</strong>
+                <span>L</span>
+            </button>
+
+        </section>
+
+        <!-- Preload all nine audio files -->
+        <audio id="boom" src="sounds/boom.wav" preload="auto"></audio>
+        <audio id="clap" src="sounds/clap.wav" preload="auto"></audio>
+        <audio id="hihat" src="sounds/hihat.wav" preload="auto"></audio>
+        <audio id="kick" src="sounds/kick.wav" preload="auto"></audio>
+        <audio id="openhat" src="sounds/openhat.wav" preload="auto"></audio>
+        <audio id="ride" src="sounds/ride.wav" preload="auto"></audio>
+        <audio id="snare" src="sounds/snare.wav" preload="auto"></audio>
+        <audio id="tink" src="sounds/tink.wav" preload="auto"></audio>
+        <audio id="tom" src="sounds/tom.wav" preload="auto"></audio>
+
+    </main>
+
+    <!-- Connect the JavaScript file -->
+    <script src="actions.js"></script>
+
+</body>
+</html>
